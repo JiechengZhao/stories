@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
@@ -16,37 +16,36 @@ export interface Story {
   contentHtml?: string
 }
 
-export function getAllStoryIds() {
-  const fileNames = fs.readdirSync(contentsDirectory)
+export async function getAllStoryIds() {
+  const fileNames = await fs.readdir(contentsDirectory)
   return fileNames.map(fileName => {
     return {
-      params: {
         id: fileName.replace(/\.md$/, '')
-      }
+ 
     }
   })
 }
 
-export function getAllStories(): Story[] {
-  const fileNames = fs.readdirSync(contentsDirectory)
-  const allStoriesData = fileNames.map(fileName => {
+export async function getAllStories(): Promise<Story[]> {
+  const fileNames = await fs.readdir(contentsDirectory)
+  const allStoriesData = await Promise.all(fileNames.map(async fileName => {
     const id = fileName.replace(/\.md$/, '')
     const fullPath = path.join(contentsDirectory, fileName)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
+    const fileContents = await fs.readFile(fullPath, 'utf8')
+    const { data } = matter(fileContents)
 
     return {
       id,
       ...(data as { title: string; date: string; author: string; tags: string[]; description: string }),
     }
-  })
+  }))
 
   return allStoriesData.sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
 export async function getStoryData(id: string): Promise<Story> {
   const fullPath = path.join(contentsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const fileContents = await fs.readFile(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
   const processedContent = await remark()

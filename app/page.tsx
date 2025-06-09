@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { getAllStories } from '@/lib/markdown'
 
-export default function Home() {
-  const stories = getAllStories()
+export default async function Home() {
+  const stories = await getAllStories()
 
   return (
     <main className="min-h-screen p-8">

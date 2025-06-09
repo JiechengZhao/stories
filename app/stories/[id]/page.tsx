@@ -1,13 +1,17 @@
 import { getStoryData, getAllStoryIds } from '@/lib/markdown'
 import Link from 'next/link'
 
+
 export async function generateStaticParams() {
-  const paths = getAllStoryIds()
+  const paths = await getAllStoryIds()
   return paths
 }
 
-export default async function Story({ params }: { params: { id: string } }) {
-  const story = await getStoryData(params.id)
+export default async function Story({ params }: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params
+  const story = await getStoryData(id)
 
   return (
     <main className="min-h-screen p-8 max-w-4xl mx-auto">
