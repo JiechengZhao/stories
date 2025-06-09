@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 我的故事集
 
-## Getting Started
+这是一个使用 Next.js 构建的个人故事集网站。所有故事都使用 Markdown 格式编写，并自动渲染为网页。
 
-First, run the development server:
+## 本地开发
 
+1. 克隆仓库
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/stories.git
+cd stories
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 安装依赖
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 启动开发服务器
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. 在浏览器中访问 [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## 添加新故事
 
-To learn more about Next.js, take a look at the following resources:
+1. 在 `contents` 目录下创建新的 `.md` 文件
+2. 使用以下格式编写故事：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```markdown
+---
+title: "故事标题"
+date: "YYYY-MM-DD"
+author: "作者名"
+tags: ["标签1", "标签2"]
+description: "故事描述"
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+故事内容...
+```
 
-## Deploy on Vercel
+## 部署
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+网站会自动部署到 GitHub Pages。每次推送到 `main` 分支时，GitHub Actions 会自动构建并部署网站。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+访问地址：https://your-username.github.io/stories/
