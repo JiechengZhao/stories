@@ -64,11 +64,11 @@ She rose from her observation seat and walked toward the main control console.
 
 She sat down at the console. On the screen was a simple, blinking command prompt.
 
-$:
+$>
 
 She began to type.
 
-> P
+P
 
 # Author's Note
 
