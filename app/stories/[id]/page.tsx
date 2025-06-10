@@ -14,27 +14,28 @@ export default async function Story({ params }: {
   const story = await getStoryData(id)
 
   return (
-    <main className="min-h-screen p-8 max-w-4xl mx-auto">
-      <Link href="/" className="text-blue-600 hover:underline mb-8 inline-block">
-        ← 返回首页
+    <>
+      <Link href="/" className="fixed top-8 left-8 text-blue-600 hover:underline bg-white bg-opacity-80 px-3 py-1 rounded z-20">
+        ← Back to Home
       </Link>
-      
-      <article className="prose lg:prose-xl mx-auto story-article">
-        <h1>{story.title}</h1>
-        <div className="text-gray-600 mb-8">
-          <span>{story.date}</span>
-          <span className="mx-2">·</span>
-          <span>{story.author}</span>
-        </div>
-        <div className="flex gap-2 mb-8">
-          {story.tags.map((tag) => (
-            <span key={tag} className="bg-gray-100 px-2 py-1 rounded text-sm">
-              {tag}
-            </span>
-          ))}
-        </div>
-        <div className="story-content" dangerouslySetInnerHTML={{ __html: story.contentHtml || '' }} />
-      </article>
-    </main>
+      <main className="min-h-screen p-8 max-w-4xl mx-auto">
+        <article className="prose lg:prose-xl mx-auto story-article">
+          <h1>{story.title}</h1>
+          <div className="text-gray-600 mb-8">
+            <span>{story.date}</span>
+            <span className="mx-2">·</span>
+            <span>{story.author}</span>
+          </div>
+          <div className="flex gap-2 mb-8">
+            {story.tags.map((tag) => (
+              <span key={tag} className="bg-gray-100 px-2 py-1 rounded text-sm">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="story-content" dangerouslySetInnerHTML={{ __html: story.contentHtml || '' }} />
+        </article>
+      </main>
+    </>
   )
-} 
+} // ... existing code ...

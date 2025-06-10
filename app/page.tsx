@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-8">我的故事集</h1>
+      <h1 className="text-4xl font-bold mb-8">My Story Collection</h1>
       <div className="grid gap-6">
         {stories.map((story) => (
           <article key={story.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">

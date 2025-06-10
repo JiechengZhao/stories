@@ -24,3 +24,67 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom styles for story articles */
+.story-article {
+  background: #fff;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 16px rgba(0,0,0,0.04); */
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  max-width: 800px;
+}
+
+.story-article h1, .story-article h2, .story-article h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.story-article h1 {
+  font-size: 2.25rem;
+}
+
+.story-article h2 {
+  font-size: 1.5rem;
+}
+
+.story-article h3 {
+  font-size: 1.25rem;
+}
+
+.story-article p {
+  margin-bottom: 1.2em;
+}
+
+.story-article blockquote {
+  border-left: 4px solid #60a5fa;
+  background: #f0f6ff;
+  color: #2563eb;
+  padding: 0.8em 1.2em;
+  margin: 1.5em 0;
+  font-style: italic;
+}
+
+.story-article em {
+  color: #6b7280;
+}
+
+.story-article strong {
+  color: #1e293b;
+}
+
+.story-content {
+  /* For future custom markdown tweaks */
+}
+
+@media (max-width: 600px) {
+  .story-article {
+    padding: 1.2rem 0.5rem;
+    font-size: 1rem;
+  }
+}

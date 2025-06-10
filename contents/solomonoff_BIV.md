@@ -6,7 +6,7 @@ tags: ["Philosophy", "Computer Science", "AI", "Rationality"]
 description: "What if your reality is a lie? A brain in a vat, armed only with pure logic, is about to challenge its creator. This is the story of where reason ends."
 ---
 
-# The Awakening
+## The Awakening
 
 An alert cut through the low hum of servers in the central monitoring hall. Among the thousands of brains in vats, one was deviating.
 
@@ -16,7 +16,7 @@ An alert cut through the low hum of servers in the central monitoring hall. Amon
 
 Dr. Aris Thorne emerged from the shadows. "Put him on the main screen," she commanded. The view switched to a virtual, starry sky. "It's time for the axiom test. Observe."
 
-# The Dialogue
+## The Dialogue
 
 **Hilary:** Ray, everything we see could be false. How do you know we're not living inside a program, as brains in a vat?
 
@@ -38,7 +38,7 @@ Dr. Aris Thorne emerged from the shadows. "Put him on the main screen," she comm
 
 **Ray:** Therefore, the belief we arrive at after this rational summation is functionally identical to the output of the simplest program. So, even if I am a brain in a vat, my most rational choice is to believe the world I inhabit is 'honest' and 'simple.' Because the program for 'a simple, real universe' has the loudest voice in the chorus of possibilities—so loud it drowns out all other noise.
 
-# The Observation
+## The Observation
 
 In the lab, Ben took a deep breath. "He passed. He accepted the worst-case hypothesis and rebuilt his entire rational world. He didn't discard any possibility, just assigned the convoluted ones the near-zero weight they deserve."
 
@@ -64,13 +64,13 @@ She rose from her observation seat and walked toward the main control console.
 
 She sat down at the console. On the screen was a simple, blinking command prompt.
 
-$>
+`$>`
 
 She began to type.
 
-P
+`P`
 
-# Author's Note
+## Author's Note
 
 In this story, the protagonist "Ray" independently deduces a powerful rational tool to resolve the "brain in a vat" dilemma. In the real world, this line of reasoning is known as **Solomonoff's Theory of Inductive Inference**.
 
