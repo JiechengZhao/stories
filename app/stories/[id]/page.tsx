@@ -19,7 +19,7 @@ export default async function Story({ params }: {
         ← 返回首页
       </Link>
       
-      <article className="prose lg:prose-xl mx-auto">
+      <article className="prose lg:prose-xl mx-auto story-article">
         <h1>{story.title}</h1>
         <div className="text-gray-600 mb-8">
           <span>{story.date}</span>
@@ -33,7 +33,7 @@ export default async function Story({ params }: {
             </span>
           ))}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: story.contentHtml || '' }} />
+        <div className="story-content" dangerouslySetInnerHTML={{ __html: story.contentHtml || '' }} />
       </article>
     </main>
   )
