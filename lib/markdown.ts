@@ -13,6 +13,7 @@ export interface Story {
   author: string
   tags: string[]
   description: string
+  license?: string
   contentHtml?: string
 }
 

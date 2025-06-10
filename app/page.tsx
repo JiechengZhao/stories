@@ -5,8 +5,8 @@ export default async function Home() {
   const stories = await getAllStories()
 
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-8">My Story Collection</h1>
+    <main className="min-h-screen p-8 max-w-3xl mx-auto">
+      <h1 className="text-4xl font-bold mb-8">Stories</h1>
       <div className="grid gap-6">
         {stories.map((story) => (
           <article key={story.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">

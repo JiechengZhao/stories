@@ -34,6 +34,11 @@ export default async function Story({ params }: {
             ))}
           </div>
           <div className="story-content" dangerouslySetInnerHTML={{ __html: story.contentHtml || '' }} />
+          {story.license && (
+            <div className="mt-12 text-sm text-gray-500 text-center">
+              License: {story.license}
+            </div>
+            )}
         </article>
       </main>
     </>
