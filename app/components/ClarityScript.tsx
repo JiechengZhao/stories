@@ -4,7 +4,7 @@ import Script from 'next/script';
 
 declare global {
   interface Window {
-    clarity?: (...args: any[]) => void;
+    clarity?: (command: string, ...args: unknown[]) => void;
   }
 }
 
